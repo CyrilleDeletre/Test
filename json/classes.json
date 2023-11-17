@@ -1,0 +1,266 @@
+{
+  "classes": [
+    {
+      "name": "Sacrier",
+      "description": "Sacriers fear no wounds. On the contrary: they draw their power from the blows inflicted upon them! Masters of blood-soaked battles, they prove to be valuable allies in fierce melees. In a word: for the opponent, the Sacrier disciple is a true scourge!",
+      "spells": [
+        {
+          "name": "Blood Pact",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 1,
+          "type": "fire",
+          "damage": 112,
+          "criticalDamage": 141,
+          "reflectDamage": 37,
+          "reflectCriticalDamage": 47,
+          "effect": "None"
+        },
+        {
+          "name": "Bloodthirst",
+          "AP": 2,
+          "minRange": 1,
+          "maxRange": 3,
+          "modifiable": true,
+          "line": true,
+          "type": "fire",
+          "damage": 66,
+          "criticalDamage": 82,
+          "effect": "100% life steal"
+        },
+        {
+          "name": "Burning Blood",
+          "AP": 4,
+          "minRange": 0,
+          "maxRange": 0,
+          "type": "fire",
+          "damage": 153,
+          "criticalDamage": 192,
+          "reflectDamage": "10% of Sacrier's max HP"
+        },
+        {
+          "name": "Blood Cage",
+          "AP": 4,
+          "minRange": 1,
+          "maxRange": 2,
+          "modifiable": true,
+          "type": "fire",
+          "damage": 113,
+          "criticalDamage": 142,
+          "effect": "-3 MP and Irremovable level 4"
+        },
+        {
+          "name": "Punishment",
+          "WP": 3,
+          "minRange": 1,
+          "maxRange": 1,
+          "type": "fire",
+          "damage": 184,
+          "criticalDamage": 230,
+          "effect": "If the Sacrier does not have 100 Fury points, sets Sacrier's HP to 20%, i.e., 100 Fury points"
+        },
+        {
+          "name": "Aversion",
+          "AP": 4,
+          "minRange": 1,
+          "maxRange": 3,
+          "modifiable": true,
+          "type": "air",
+          "damage": 113,
+          "criticalDamage": 142,
+          "stabilizedDamage": 170,
+          "stabilizedCriticalDamage": 213
+        },
+        {
+          "name": "Projection",
+          "AP": 2,
+          "minRange": 1,
+          "maxRange": 2,
+          "line": true,
+          "type": "air",
+          "damage": 61,
+          "criticalDamage": 76,
+          "effect": "Teleports to the other side"
+        },
+        {
+          "name": "Assault",
+          "AP": 1,
+          "WP": 1,
+          "minRange": 1,
+          "maxRange": 5,
+          "line": true,
+          "type": "air",
+          "damage": 56,
+          "criticalDamage": 71,
+          "effect": "Exchange positions"
+        },
+        {
+          "name": "Spiritual Storm",
+          "AP": 3,
+          "minRange": 2,
+          "maxRange": 4,
+          "modifiable": true,
+          "type": "air",
+          "damage": 92,
+          "criticalDamage": 115,
+          "effect": "Pushes 1 cell"
+        },
+        {
+          "name": "Fulmination",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 3,
+          "noLOS": true,
+          "line": true,
+          "type": "air",
+          "damage": 113,
+          "criticalDamage": 142,
+          "effect": "Teleports to the other side"
+        },
+        {
+          "name": "Rocky Fist",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 3,
+          "line": true,
+          "type": "earth",
+          "damage": 85,
+          "criticalDamage": 106,
+          "armor": 827,
+          "armorCriticalDamage": 1034
+        },
+        {
+          "name": "Gripping Tattoo Fist",
+          "AP": 2,
+          "minRange": 1,
+          "maxRange": 4,
+          "line": true,
+          "type": "earth",
+          "damage": 61,
+          "criticalDamage": 76,
+          "effect": "Approaches by 3 cells"
+        },
+        {
+          "name": "Madness",
+          "AP": 2,
+          "WP": 1,
+          "minRange": 1,
+          "maxRange": 3,
+          "type": "earth",
+          "damage": 78,
+          "criticalDamage": 98,
+          "tackle": 114,
+          "effect": "Attracts targets around the targeted cell"
+        },
+        {
+          "name": "Columns",
+          "AP": 5,
+          "minRange": 0,
+          "maxRange": 2,
+          "type": "earth",
+          "damage": 153,
+          "criticalDamage": 192,
+          "effect": "For each enemy hit, gains 5% HP in armor",
+          "armor": 171
+        },
+        {
+          "name": "Smash",
+          "AP": 4,
+          "minRange": 1,
+          "maxRange": 1,
+          "type": "earth",
+          "damage": 113,
+          "criticalDamage": 142,
+          "armorDamage": 170,
+          "armorCriticalDamage": 213,
+          "effect": "8% of missing HP in armor"
+        },
+        {
+          "name": "Attraction",
+          "WP": 2,
+          "minRange": 2,
+          "maxRange": 7,
+          "line": true,
+          "type": "active",
+          "effect": "Approaches by 3 cells"
+        },
+        {
+          "name": "Sacrifice",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 2,
+          "modifiable": true,
+          "type": "active",
+          "effect": "Sacrifice for 2 turns"
+        },
+        {
+          "name": "Transposition",
+          "AP": 1,
+          "WP": 1,
+          "minRange": 2,
+          "maxRange": 6,
+          "noLOS": true,
+          "modifiable": true,
+          "type": "active",
+          "effect": "Exchange positions"
+        },
+        {
+          "name": "Blood Armor",
+          "AP": 2,
+          "minRange": 1,
+          "maxRange": 1,
+          "type": "active",
+          "effect": "Armor with 15% of max HP",
+          "stabilized": "true",
+          "tackle": 458
+        },
+        {
+          "name": "Gash",
+          "AP": 1,
+          "minRange": 1,
+          "maxRange": 6,
+          "modifiable": true,
+          "type": "active",
+          "effect": "Whatever"
+        },
+        {
+          "name": "Blood Transfer",
+          "AP": 1,
+          "WP": 1,
+          "minRange": 1,
+          "maxRange": 4,
+          "type": "active",
+          "effect": "Exchange positions"
+        }
+      ]
+    },
+    {
+      "name": "Eniripsa",
+      "description": "Eniripsas are healers specialized in the healing and support of their team.",
+      "spells": [
+        {
+          "name": "Youth Word",
+          "description": "Restores health points to an ally.",
+          "requiredLevel": 1,
+          "AP": 2,
+          "range": 1,
+          "MP": 0,
+          "WP": 0,
+          "airDamage": "neutral",
+          "damage": -15
+        },
+        {
+          "name": "Wave of Life",
+          "description": "Heals all team members in a defined area.",
+          "requiredLevel": 15,
+          "AP": 5,
+          "range": 1,
+          "MP": 3,
+          "WP": 0,
+          "airDamage": "neutral",
+          "damage": -30
+        }
+      ]
+    }
+  ]
+}

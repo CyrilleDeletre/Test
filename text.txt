@@ -1,0 +1,45 @@
+ce que je veux 
+
+
+Quand on arrive sur l'accueil: 
+On a le titre principal : Calculer vos dégats et comparez vos builds
+On a un overlay qui arrive :
+"Choisissez votre classe"
+avec une série d'images ses classes et leurs noms.
+Une fois la classe choisis, elle se met en haut a gauche.
+ET les sorts sont générés.
+au click sur cette image, l'overlay se réouvre, la classe choisie est "entouré"
+et on peut changer de classe en cliquant sur une autre classe
+CELA VA METTRE A JOUR LES SORTS.
+
+Le code vérifie si les stats de l'utilisateurs ont deja été rentré, si non :
+il indique à lutilisateur de rentrer ses stats.
+avec un bouton "commencer"
+qui va ouvrir le select "STATS" dans le "pseudo header"
+
+En ouvrant ce select, l'utilisateur doit rentrer chaque champs obligatoirement
+sinon il ne peut pas envoyer les stats.
+
+Si il veut modifier les stats, un bouton lui permet de modifier dans chaque champs.
+il devra refaire un envoi pour mettre a jour.
+il peut aussi "clear" les stats.
+Si il le fait, un message dit a l'utilisateur de rentrer ses stats.
+
+En ouvrant l'onglet "sorts"
+la liste des sorts apparait.
+chaque sort va s'afficher cote a cote.
+Si on clique sur l'un d'eux, une fenetre s'ouvre avec 2 onglet
+le premier onglet indique :
+degat de base du sort.
+degat du sort
+dégat du sort en coup critique
+moyennene des degat
+
+le deuxieme onglet affichera les memes choses MAIS avec l'ajouter de par PA
+
+// PLUS TARD
+pouvoir drag and drop dans un endroit les sorts
+afin de calculer des rotations de sorts
+forcer les input PA/PM/PW
+et retirer au fur a mesure les PO restant en live 
+mettre un message d'erreur si trop de PA/PM/PW ont été utilisé par rapport au stats 

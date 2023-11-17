@@ -1,0 +1,68 @@
+/* Couleurs */
+body{
+    padding: 0;
+    margin: 0;
+
+}
+
+h1{
+    text-align: center;
+}
+button{
+    background-color: #505050;
+    color: white;
+    padding: 1rem;
+    border: none;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #dddddd;
+    width: 50%;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    padding: 0.5rem 0;
+}
+div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+section{
+    padding: 1rem;
+    width: 250px;
+}
+
+
+.type-fire {
+    background-color: #e85512;
+}
+
+.type-air {
+    background-color: #83489d;
+}
+
+.type-water {
+    background-color: #00b8eb;
+}
+
+.type-earth {
+    background-color: #95bb27;
+}
+
+.type-active {
+    background-color: #c6b282;
+}
+
+.type-chromatic {
+    background-color: #f1e44c;
+}
