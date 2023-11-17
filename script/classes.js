@@ -5,39 +5,58 @@ fetch("../json/classes.json")
         // On stocke les informations du json dans classData
         const classData = data.classes;
 
-        // Fonction pour calculer ??
-        // function calculate(userValues) {
-        //     // On créer les variables récupérées de l'utilisateurs
-        //     let {
-        //         damageInflicted,
-        //         fireMastery,
-        //         waterMastery,
-        //         earthMastery,
-        //         airMastery,
-        //         meleeMastery,
-        //         distanceMastery,
-        //         criticalMastery,
-        //         criticalHitsPercentage,
-        //         backMastery,
-        //         berserkMastery,
-        //         healMastery
-        //     } = userValues;
+        // Fonction pour récupérer les valeurs des stats de l'utilisateur.
+        function getUserValues(userValues) {
+            // On créer les variables récupérées de l'utilisateurs.
+            let {
+                damageInflicted,
+                fireMastery,
+                waterMastery,
+                earthMastery,
+                airMastery,
+                meleeMastery,
+                distanceMastery,
+                criticalMastery,
+                criticalHitsPercentage,
+                backMastery,
+                berserkMastery,
+                healMastery
+            } = userValues;
 
-        //     return {
-        //         damageInflicted,
-        //         fireMastery,
-        //         waterMastery,
-        //         earthMastery,
-        //         airMastery,
-        //         meleeMastery,
-        //         distanceMastery,
-        //         criticalMastery,
-        //         criticalHitsPercentage,
-        //         backMastery,
-        //         berserkMastery,
-        //         healMastery,
-        //     };
-        // }
+            // On retourne ces valeurs pour les utiliser hors de la fonction.
+            return {
+                damageInflicted,
+                fireMastery,
+                waterMastery,
+                earthMastery,
+                airMastery,
+                meleeMastery,
+                distanceMastery,
+                criticalMastery,
+                criticalHitsPercentage,
+                backMastery,
+                berserkMastery,
+                healMastery,
+            };
+        }
+
+        // Fonction pour récolter la value de l'utilisateur et les stocker
+            function userValues() {
+                const userValues = {
+                    damageInflicted: parseFloat(document.querySelector('#damageInflicted').value),
+                    fireMastery: parseInt(document.querySelector('#fireMastery').value),
+                    waterMastery: parseInt(document.querySelector('#waterMastery').value),
+                    earthMastery: parseInt(document.querySelector('#earthMastery').value),
+                    airMastery: parseInt(document.querySelector('#airMastery').value),
+                    meleeMastery: parseInt(document.querySelector('#meleeMastery').value),
+                    distanceMastery: parseInt(document.querySelector('#distanceMastery').value),
+                    criticalMastery: parseInt(document.querySelector('#criticalMastery').value),
+                    criticalHitsPercentage: parseFloat(document.querySelector('#criticalHitsPercentage').value),
+                    backMastery: parseInt(document.querySelector('#backMastery').value),
+                    berserkMastery: parseInt(document.querySelector('#berserkMastery').value),
+                    healMastery: parseInt(document.querySelector('#healMastery').value),
+                };
+            }
 
         // fonction pour afficher les sorts des classes
         function displaySpells(classData) {
@@ -53,78 +72,60 @@ fetch("../json/classes.json")
                 classesSection.appendChild(classesName);
 
                 // Afficher les sorts des classes
-                const spellsContainer = document.createElement("div");
+                const spellsContainer = document.createElement("section");
                 spellsContainer.className = "spells-container";
                 classesInfos.spells.forEach(spell => {
                     const damagePerAP = (spell.AP ? (spell.damage / spell.AP).toFixed(2) : spell.damage.toFixed(0));
 
                     let spellCost = '';
 
-                    // Si le spellCost est défini dans le json on l'attribut à spellCost
+                    // Si le AP est défini dans le json on l'attribut à spellCost
                     if (spell.AP !== undefined) {
                         spellCost += `${spell.AP} AP`;
                     }
 
-                    // Add the MP value if present
+                    // Si le MP est défini dans le json on l'attribut à spellCost
                     if (spell.MP !== undefined) {
                         spellCost += ` ${spell.MP} MP`;
                     }
 
-                    // Add the WP value if present
+                    // Si le WP est défini dans le json on l'attribut à spellCost
                     if (spell.WP !== undefined) {
                         spellCost += ` ${spell.WP} WP`;
                     }
 
-                    // Use elemental mastery specific to the spell type
-                    const usedMastery = userValues[spell.type + 'Mastery'] || 0;
+                    // Définir quelle maîtrise élémentaire est utilisée par l'utilisateur pour chaque type de sort
+                    const elementalMastery = userValues[spell.type + 'Mastery'] || 0;
 
-                    // Calculate totalDamage
-                    const totalDamage = spell.damage * (1 + (usedMastery + userValues.backMastery + userValues.berserkMastery) / 100);
-                    const totalDamageCrit = totalDamage * 1.25;
+                    // Calcul du dégâts en normal et en coup critique
+                    const totalDamage = spell.damage * (1 + (elementalMastery + userValues.healMastery + userValues.meleeMastery + userValues.distanceMastery + userValues.backMastery + userValues.berserkMastery) / 100) * (1 + (userValues.damageInflicted) / 100);
+                    const totalCriticalStrikeDamage = spell.criticalStrikeDamage * (1 + (elementalMastery + userValues.criticalMastery + userValues.healMastery + userValues.meleeMastery + userValues.distanceMastery + userValues.backMastery + userValues.berserkMastery) / 100) * (1 + (userValues.damageInflicted) / 100);
 
-                    // Add the average damage calculation
+                    // Calcul de la moyenne des dégâts en fonction des % de coup critique de l'utilisateur
                     const averageDamage =
-                        (totalDamage * (1 - userValues.criticalHitsPercentage)) + // If I don't crit
-                        (totalDamageCrit * userValues.criticalHitsPercentage); // If I crit
+                        (totalDamage * (1 - userValues.criticalHitsPercentage)) + // Dégâts non critique en fonction des % de chance de Coups Critiques
+                        (totalCriticalStrikeDamage * userValues.criticalHitsPercentage); // Dégâts en Coup Critique en fonction des % de chance des Coups Critiques
 
-                    // Declaration of spellElement before using it
-                    const spellElement = document.createElement("section");
-                    spellElement.className = `type-${spell.type}`; // Add the class corresponding to the element
-                    spellElement.innerHTML = `<h3>${spell.name} - ${spellCost}</h3><p>Damage: ${spell.damage}</p><p>Damage per AP: ${damagePerAP}</p><p>Average Damage: ${averageDamage.toFixed(2)}</p>`;
-                    spellsContainer.appendChild(spellElement);
+                    // Création de chaque sort par classes
+                    const spells = document.createElement("article");
+                    spells.className = `type-${spell.type}`; // Permet de changer la couleur du background en fonction du type de l'élément
+                    spells.innerHTML = `
+                                            <h3>${spell.name} - ${spellCost}</h3>
+                                            <p>Damage: ${spell.damage}</p>
+                                            <p>Damage per AP: ${damagePerAP}</p>
+                                            <p>Average Damage: ${averageDamage.toFixed(2)}</p>
+                                        `;
+                    spellsContainer.appendChild(spells);
                 });
 
-                // Add the spell container to the class
-                classContainer.appendChild(spellsContainer);
+                // Ajout du conteneur des sorts dans la section de sa classe
+                classesSection.appendChild(spellsContainer);
 
-                // Add the class to the document
-                document.querySelector("#classesContainer").appendChild(classesSection);
+                // Ajout de tout ça dans le container principal
+                document.querySelector("#classes-container").appendChild(classesSection);
             });
         }
 
-        function calculateAndDisplay() {
-            const userValues = {
-                damageInflicted: parseFloat(document.getElementById('damageInflicted').value),
-                fireMastery: parseInt(document.getElementById('fireMastery').value),
-                waterMastery: parseInt(document.getElementById('waterMastery').value),
-                earthMastery: parseInt(document.getElementById('earthMastery').value),
-                airMastery: parseInt(document.getElementById('airMastery').value),
-                meleeMastery: parseInt(document.getElementById('meleeMastery').value),
-                distanceMastery: parseInt(document.getElementById('distanceMastery').value),
-                criticalMastery: parseInt(document.getElementById('criticalMastery').value),
-                criticalHitsPercentage: parseFloat(document.getElementById('criticalHitsPercentage').value),
-                backMastery: parseInt(document.getElementById('backMastery').value),
-                berserkMastery: parseInt(document.getElementById('berserkMastery').value),
-                healMastery: parseInt(document.getElementById('healMastery').value),
-            };
-
-            const calculatedValues = calculate(userValues);
-
-            // Appel de la fonction d'affichage des sorts
-            displaySpells(classData, calculatedValues);
-        }
-
-        // Appel de la fonction calculateAndDisplay lorsque l'utilisateur clique sur le bouton
-        document.getElementById('calculateButton').addEventListener('click', calculateAndDisplay);
+        displaySpells(classData)
     })
     .catch(error => console.error('Erreur de chargement JSON :', error));

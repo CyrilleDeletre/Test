@@ -11,9 +11,9 @@
           "maxRange": 1,
           "type": "fire",
           "damage": 112,
-          "criticalDamage": 141,
+          "criticalStrikeDamage": 141,
           "reflectDamage": 37,
-          "reflectCriticalDamage": 47,
+          "reflectcriticalStrikeDamage": 47,
           "effect": "None"
         },
         {
@@ -25,7 +25,7 @@
           "line": true,
           "type": "fire",
           "damage": 66,
-          "criticalDamage": 82,
+          "criticalStrikeDamage": 82,
           "effect": "100% life steal"
         },
         {
@@ -35,7 +35,7 @@
           "maxRange": 0,
           "type": "fire",
           "damage": 153,
-          "criticalDamage": 192,
+          "criticalStrikeDamage": 192,
           "reflectDamage": "10% of Sacrier's max HP"
         },
         {
@@ -46,7 +46,7 @@
           "modifiable": true,
           "type": "fire",
           "damage": 113,
-          "criticalDamage": 142,
+          "criticalStrikeDamage": 142,
           "effect": "-3 MP and Irremovable level 4"
         },
         {
@@ -56,7 +56,7 @@
           "maxRange": 1,
           "type": "fire",
           "damage": 184,
-          "criticalDamage": 230,
+          "criticalStrikeDamage": 230,
           "effect": "If the Sacrier does not have 100 Fury points, sets Sacrier's HP to 20%, i.e., 100 Fury points"
         },
         {
@@ -67,9 +67,9 @@
           "modifiable": true,
           "type": "air",
           "damage": 113,
-          "criticalDamage": 142,
+          "criticalStrikeDamage": 142,
           "stabilizedDamage": 170,
-          "stabilizedCriticalDamage": 213
+          "stabilizedcriticalStrikeDamage": 213
         },
         {
           "name": "Projection",
@@ -79,7 +79,7 @@
           "line": true,
           "type": "air",
           "damage": 61,
-          "criticalDamage": 76,
+          "criticalStrikeDamage": 76,
           "effect": "Teleports to the other side"
         },
         {
@@ -91,7 +91,7 @@
           "line": true,
           "type": "air",
           "damage": 56,
-          "criticalDamage": 71,
+          "criticalStrikeDamage": 71,
           "effect": "Exchange positions"
         },
         {
@@ -102,7 +102,7 @@
           "modifiable": true,
           "type": "air",
           "damage": 92,
-          "criticalDamage": 115,
+          "criticalStrikeDamage": 115,
           "effect": "Pushes 1 cell"
         },
         {
@@ -114,7 +114,7 @@
           "line": true,
           "type": "air",
           "damage": 113,
-          "criticalDamage": 142,
+          "criticalStrikeDamage": 142,
           "effect": "Teleports to the other side"
         },
         {
@@ -125,9 +125,9 @@
           "line": true,
           "type": "earth",
           "damage": 85,
-          "criticalDamage": 106,
+          "criticalStrikeDamage": 106,
           "armor": 827,
-          "armorCriticalDamage": 1034
+          "armorcriticalStrikeDamage": 1034
         },
         {
           "name": "Gripping Tattoo Fist",
@@ -137,7 +137,7 @@
           "line": true,
           "type": "earth",
           "damage": 61,
-          "criticalDamage": 76,
+          "criticalStrikeDamage": 76,
           "effect": "Approaches by 3 cells"
         },
         {
@@ -148,7 +148,7 @@
           "maxRange": 3,
           "type": "earth",
           "damage": 78,
-          "criticalDamage": 98,
+          "criticalStrikeDamage": 98,
           "tackle": 114,
           "effect": "Attracts targets around the targeted cell"
         },
@@ -159,7 +159,7 @@
           "maxRange": 2,
           "type": "earth",
           "damage": 153,
-          "criticalDamage": 192,
+          "criticalStrikeDamage": 192,
           "effect": "For each enemy hit, gains 5% HP in armor",
           "armor": 171
         },
@@ -170,9 +170,9 @@
           "maxRange": 1,
           "type": "earth",
           "damage": 113,
-          "criticalDamage": 142,
+          "criticalStrikeDamage": 142,
           "armorDamage": 170,
-          "armorCriticalDamage": 213,
+          "armorcriticalStrikeDamage": 213,
           "effect": "8% of missing HP in armor"
         },
         {

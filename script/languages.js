@@ -10,16 +10,16 @@ const languages = {
 // Constantes pour les textes
 const texts = {
   headTitle: {
-    'fr' : 'Calculateur Wakfu',
-    'en' : 'Wakfu Calculator',
+    fr: 'Calculateur Wakfu',
+    en: 'Wakfu Calculator',
   },
   bodyTitle: {
-    'fr' : 'Calculateur de dégât pour Wakfu',
-    'en': 'Wakfu Damage calculator for Wakfu',
+    fr: 'Calculateur de dégât pour Wakfu',
+    en: 'Wakfu Damage calculator for Wakfu',
   },
   languageButton: {
-    'fr' : 'English',
-    'en': 'Français',
+    fr: 'English',
+    en: 'Français',
   }
 };
 
