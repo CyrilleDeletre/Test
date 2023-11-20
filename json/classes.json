@@ -1,15 +1,21 @@
 {
+  "languages":["en", "fr"],
   "classes": [
     {
-      "name": "Sacrier",
-      "description": "Sacriers fear no wounds. On the contrary: they draw their power from the blows inflicted upon them! Masters of blood-soaked battles, they prove to be valuable allies in fierce melees. In a word: for the opponent, the Sacrier disciple is a true scourge!",
+      "name": {"en": "Sacrier", "fr": "Sacrieur"},
+      "image": "../img/sacrier/sacrier.jpg",
+      "description": {
+        "en": "It's no use trying to beat a Sacrier into submission - they become more powerful with each attack they receive! Nobody takes the motto 'no pain, no gain' more seriously than these warriors. Happy to haunt the front lines, ready to draw first blood, they're the perfect allies for those long, relentless battles.",
+        "fr": "Les Sacrieurs ne craignent pas les blessures. Au contraire : ils tirent leur puissance des coups qu'on leur inflige ! Adeptes des longues soirées sang pour sang guerrières, ils font figure d'alliés précieux dans les mêlées franches. En un mot : pour l'adversaire, le disciple de Sacrieur est une véritable plaie !"
+      },
       "spells": [
         {
-          "name": "Blood Pact",
+          "name": {"en": "Blood Rush", "fr": "Sang pour sang"},
+          "image": "../img/sacrier/blood-rush.png",
           "AP": 3,
           "minRange": 1,
           "maxRange": 1,
-          "type": "fire",
+          "type": {"en": "fire", "fr": "feu"},
           "damage": 112,
           "criticalStrikeDamage": 141,
           "reflectDamage": 37,
@@ -17,158 +23,172 @@
           "effect": "None"
         },
         {
-          "name": "Bloodthirst",
+          "name": {"en": "Bloodthirsty Fury", "fr": "Furie sanguinaire"},
+          "image": "../img/sacrier/bloodthirsty-fury.png",
           "AP": 2,
           "minRange": 1,
           "maxRange": 3,
           "modifiable": true,
           "line": true,
-          "type": "fire",
+          "type": {"en": "fire", "fr": "feu"},
           "damage": 66,
           "criticalStrikeDamage": 82,
           "effect": "100% life steal"
         },
         {
-          "name": "Burning Blood",
+          "name": {"en": "Burning Blood", "fr": "Sang brûlant"},
+          "image": "../img/sacrier/burning-blood.png",
           "AP": 4,
           "minRange": 0,
           "maxRange": 0,
-          "type": "fire",
+          "type": {"en": "fire", "fr": "feu"},
           "damage": 153,
           "criticalStrikeDamage": 192,
           "reflectDamage": "10% of Sacrier's max HP"
         },
         {
-          "name": "Blood Cage",
+          "name": {"en": "Cage of Blood", "fr": "Cage de sang"},
+          "image": "../img/sacrier/cage-of-blood.png",
           "AP": 4,
           "minRange": 1,
           "maxRange": 2,
           "modifiable": true,
-          "type": "fire",
+          "type": {"en": "fire", "fr": "feu"},
           "damage": 113,
           "criticalStrikeDamage": 142,
           "effect": "-3 MP and Irremovable level 4"
         },
         {
-          "name": "Punishment",
+          "name": {"en": "Punition", "fr": "Punition"},
+          "image": "../img/sacrier/punition.png",
           "WP": 3,
           "minRange": 1,
           "maxRange": 1,
-          "type": "fire",
+          "type": {"en": "fire", "fr": "feu"},
           "damage": 184,
           "criticalStrikeDamage": 230,
           "effect": "If the Sacrier does not have 100 Fury points, sets Sacrier's HP to 20%, i.e., 100 Fury points"
         },
         {
-          "name": "Aversion",
+          "name": {"en": "Aversion", "fr": "Aversion"},
+          "image": "../img/sacrier/aversion.png",
           "AP": 4,
           "minRange": 1,
           "maxRange": 3,
           "modifiable": true,
-          "type": "air",
+          "type": {"en": "air", "fr": "air"},
           "damage": 113,
           "criticalStrikeDamage": 142,
           "stabilizedDamage": 170,
           "stabilizedcriticalStrikeDamage": 213
         },
         {
-          "name": "Projection",
+          "name": {"en": "Projection", "fr": "Projection"},
+          "image": "../img/sacrier/projection.png",
           "AP": 2,
           "minRange": 1,
           "maxRange": 2,
           "line": true,
-          "type": "air",
+          "type": {"en": "air", "fr": "air"},
           "damage": 61,
           "criticalStrikeDamage": 76,
           "effect": "Teleports to the other side"
         },
         {
-          "name": "Assault",
+          "name": {"en": "Assault", "fr": "Assaut"},
+          "image": "../img/sacrier/assault.png",
           "AP": 1,
           "WP": 1,
           "minRange": 1,
           "maxRange": 5,
           "line": true,
-          "type": "air",
+          "type": {"en": "air", "fr": "air"},
           "damage": 56,
           "criticalStrikeDamage": 71,
           "effect": "Exchange positions"
         },
         {
-          "name": "Spiritual Storm",
+          "name": {"en": "Spiritual Tempest", "fr": "Tempête spirituelle"},
+          "image": "../img/sacrier/spiritual-tempest.png",
           "AP": 3,
           "minRange": 2,
           "maxRange": 4,
           "modifiable": true,
-          "type": "air",
+          "type": {"en": "air", "fr": "air"},
           "damage": 92,
           "criticalStrikeDamage": 115,
           "effect": "Pushes 1 cell"
         },
         {
-          "name": "Fulmination",
+          "name": {"en": "Light Speed", "fr": "Fulgurance"},
+          "image": "../img/sacrier/light-speed.png",
           "AP": 3,
           "minRange": 1,
           "maxRange": 3,
-          "noLOS": true,
+          "noSight": true,
           "line": true,
-          "type": "air",
+          "type": {"en": "air", "fr": "air"},
           "damage": 113,
           "criticalStrikeDamage": 142,
           "effect": "Teleports to the other side"
         },
         {
-          "name": "Rocky Fist",
+          "name": {"en": "Rocky Foot", "fr": "Pied rocheux"},
+          "image": "../img/sacrier/rocky-foot.png",
           "AP": 3,
           "minRange": 1,
           "maxRange": 3,
           "line": true,
-          "type": "earth",
+          "type": {"en": "earth", "fr": "terre"},
           "damage": 85,
           "criticalStrikeDamage": 106,
           "armor": 827,
           "armorcriticalStrikeDamage": 1034
         },
         {
-          "name": "Gripping Tattoo Fist",
+          "name": {"en": "Sacrier's Fist", "fr": "Poing tatoué agrippant"},
+          "image": "../img/sacrier/sacrier-fist.png",
           "AP": 2,
           "minRange": 1,
           "maxRange": 4,
           "line": true,
-          "type": "earth",
+          "type": {"en": "earth", "fr": "terre"},
           "damage": 61,
           "criticalStrikeDamage": 76,
           "effect": "Approaches by 3 cells"
         },
         {
-          "name": "Madness",
+          "name": {"en": "Insanity", "fr": "Démence"},
+          "image": "../img/sacrier/insanity.png",
           "AP": 2,
           "WP": 1,
           "minRange": 1,
           "maxRange": 3,
-          "type": "earth",
+          "type": {"en": "earth", "fr": "terre"},
           "damage": 78,
           "criticalStrikeDamage": 98,
           "tackle": 114,
           "effect": "Attracts targets around the targeted cell"
         },
         {
-          "name": "Columns",
+          "name": {"en": "Colonnades", "fr": "Colonnades"},
+          "image": "../img/sacrier/colonnades.png",
           "AP": 5,
           "minRange": 0,
           "maxRange": 2,
-          "type": "earth",
+          "type": {"en": "earth", "fr": "terre"},
           "damage": 153,
           "criticalStrikeDamage": 192,
           "effect": "For each enemy hit, gains 5% HP in armor",
           "armor": 171
         },
         {
-          "name": "Smash",
+          "name": {"en" : "Smashes", "fr": "Fracasse"},
+          "image": "../img/sacrier/smashes.png",
           "AP": 4,
           "minRange": 1,
           "maxRange": 1,
-          "type": "earth",
+          "type": {"en": "earth", "fr": "terre"},
           "damage": 113,
           "criticalStrikeDamage": 142,
           "armorDamage": 170,
@@ -176,89 +196,403 @@
           "effect": "8% of missing HP in armor"
         },
         {
-          "name": "Attraction",
+          "name": {"en" : "Attraction", "fr": "Attirance"},
           "WP": 2,
           "minRange": 2,
           "maxRange": 7,
           "line": true,
-          "type": "active",
+          "type": {"en": "active", "fr": "actif"},
           "effect": "Approaches by 3 cells"
         },
         {
-          "name": "Sacrifice",
+          "name": {"en" : "Sacrifice", "fr": "Sacrifice"},
           "AP": 3,
           "minRange": 1,
           "maxRange": 2,
           "modifiable": true,
-          "type": "active",
+          "type": {"en": "active", "fr": "actif"},
           "effect": "Sacrifice for 2 turns"
         },
         {
-          "name": "Transposition",
+          "name": {"en" : "Transposition", "fr": "Transposition"},
           "AP": 1,
           "WP": 1,
           "minRange": 2,
           "maxRange": 6,
-          "noLOS": true,
+          "noSight": true,
           "modifiable": true,
-          "type": "active",
+          "type": {"en": "active", "fr": "actif"},
           "effect": "Exchange positions"
         },
         {
-          "name": "Blood Armor",
+          "name": {"en" : "Sanguine Armor", "fr": "Sanguine Armor"},
           "AP": 2,
           "minRange": 1,
           "maxRange": 1,
-          "type": "active",
+          "type": {"en": "active", "fr": "actif"},
           "effect": "Armor with 15% of max HP",
           "stabilized": "true",
           "tackle": 458
         },
         {
-          "name": "Gash",
+          "name": {"en" : "Gash", "fr": "Entaille"},
           "AP": 1,
           "minRange": 1,
           "maxRange": 6,
           "modifiable": true,
-          "type": "active",
+          "type": {"en": "active", "fr": "actif"},
           "effect": "Whatever"
         },
         {
-          "name": "Blood Transfer",
+          "name": {"en" : "Blood Transfer", "fr": "Transfert sanguin"},
           "AP": 1,
           "WP": 1,
           "minRange": 1,
           "maxRange": 4,
-          "type": "active",
+          "type": {"en": "active", "fr": "actif"},
           "effect": "Exchange positions"
+        },
+        {
+          "name": {"en" : "Blood Flow", "fr": "Circulation sanguine"},
+          "type": {"en": "passive", "fr": "active"},
+          "effect": "Whatever"
         }
       ]
     },
     {
-      "name": "Eniripsa",
-      "description": "Eniripsas are healers specialized in the healing and support of their team.",
+      "name": {"en": "Eniripsa", "fr": "Eniripsa"},
+      "image": "../img/eniripsa/eniripsa.jpg",
+      "description": {
+        "en": "Eniripsas have long been renowned for their incredible healing powers. No matter what ailments their allies are suffering from, they always know the magic word to make things better. As for enemies, suffice it to say that they'd better not get on the wrong side of an Eniripsa's sharp tongue...",
+        "fr": "Depuis toujours, les Eniripsas sont réputés pour être d'inestimables soigneurs. Vous pouvez les croire sur parole : il leur suffit d'un mot pour vous guérir de tous les maux ! Quant à leurs ennemis, rassurez-vous, ils trouvent toujours un moyen de leur faire avaler la pilule..."
+      },
       "spells": [
         {
-          "name": "Youth Word",
-          "description": "Restores health points to an ally.",
-          "requiredLevel": 1,
+          "name": {"en" : "Invigoration", "fr": "Vivification"},
+          "image": "../img/eniripsa/invigoration.png",
           "AP": 2,
-          "range": 1,
-          "MP": 0,
-          "WP": 0,
-          "airDamage": "neutral",
-          "damage": -15
+          "minRange": 1,
+          "maxRange": 6,
+          "modifiable": true,
+          "type": {"en": "water", "fr": "eau"},
+          "heal": 33,
+          "criticalStrikeHeal": 42,
+          "damage": 61,
+          "criticalStrikeDamage": 76,
+          "dodge": 45,
+          "effect": "none"
         },
         {
-          "name": "Wave of Life",
-          "description": "Heals all team members in a defined area.",
-          "requiredLevel": 15,
-          "AP": 5,
+          "name": {"en" : "Healing Word", "fr": "Mot soignant"},
+          "image": "../img/eniripsa/healing-word.png",
+          "AP": 3,
+          "minRange": 0,
+          "maxRange": 5,
+          "type": {"en": "water", "fr": "eau"},
+          "heal": 47,
+          "criticalStrikeHeal": 59,
+          "damage": 85,
+          "criticalStrikeDamage": 106,
           "range": 1,
-          "MP": 3,
-          "WP": 0,
-          "airDamage": "neutral",
-          "damage": -30
+          "effect": "+1 range (max 3)"
+        },
+        {
+          "name": {"en" : "Infusion", "fr": "Infusion"},
+          "image": "../img/eniripsa/infusion.png",
+          "AP": 4,
+          "minRange": 1,
+          "maxRange": 3,
+          "modifiable": true,
+          "type": {"en": "water", "fr": "eau"},
+          "heal": 31,
+          "criticalStrikeHeal": 39,
+          "damage": 113,
+          "criticalStrikeDamage": 142,
+          "effect": "soigne l'equivalent du soin au début du tour 3 fois (cumulable)"
+        },
+        {
+          "name": {"en" : "Revitalization", "fr": "Revitalisation"},
+          "image": "../img/eniripsa/revitalization.png",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 2,
+          "modifiable": true,
+          "type": {"en": "water", "fr": "eau"},
+          "heal": 40,
+          "criticalStrikeHeal": 50,
+          "damage": 71,
+          "criticalStrikeDamage": 89,
+          "damageInflictedBonus": 10,
+          "effect": "gagne 10% de degat, cumuluable + la zone d'effet change si eniripsa a moins de 80% pdv max"
+        },
+        {
+          "name": {"en" : "Regeneration", "fr": "Reconstitution"},
+          "image": "../img/eniripsa/regeneration.png",
+          "AP": 5,
+          "WP": 5,
+          "minRange": 1,
+          "maxRange": 3,
+          "noSight": true,
+          "modifiable": true,
+          "lign": true,
+          "type": {"en": "water", "fr": "eau"},
+          "heal": 94,
+          "criticalStrikeHeal": 118,
+          "damage": 170,
+          "criticalStrikeDamage": 213,
+          "healingBonus": 20,
+          "effect": "gagne 20% soins réalisé 1 tour et se soigne en meme temps que sa cible"
+        },
+        {
+          "name": {"en" : "Anatomy", "fr": "Anatomie"},
+          "image": "../img/eniripsa/anatomy.png",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 4,
+          "modifiable": true,
+          "type": {"en": "air", "fr": "air"},
+          "highHPDamage": 142,
+          "highHPCriticalStrikeDamage": 178,
+          "damage": 85,
+          "criticalStrikeDamage": 106,
+          "effect": "le sort fait plus de dégat si l'eniripsa est a plus de 80% pv"
+        },
+        {
+          "name": {"en" : "Psychosis", "fr": "Psychose"},
+          "image": "../img/eniripsa/psychosis.png",
+          "AP": 3,
+          "WP": 1,
+          "minRange": 3,
+          "maxRange": 4,
+          "modifiable": true,
+          "type": {"en": "air", "fr": "air"},
+          "damage": 78,
+          "criticalStrikeDamage": 98,
+          "damageInflictedDebuff": -20,
+          "criticalStrikeDebuff": -20,
+          "effect": "-20 crit et defat infligé dans la zone"
+        },
+        {
+          "name": {"en" : "Cross-Airs", "fr": "Colli-mateur"},
+          "image": "../img/eniripsa/cross-airs.png",
+          "AP": 2,
+          "minRange": 1,
+          "maxRange": 4,
+          "modifiable": true,
+          "lign": true,
+          "type": {"en": "air", "fr": "air"},
+          "damage": 56,
+          "criticalStrikeDamage": 71,
+          "collisionDamage": 28,
+          "effect": "la cible subit des degat suplementaire lors des collisions"
+        },
+        {
+          "name": {"en" : "Infected Flask", "fr": "Fiole infectée"},
+          "image": "../img/eniripsa/infected-flask.png",
+          "AP": 4,
+          "WP": 2,
+          "minRange": 1,
+          "maxRange": 3,
+          "modifiable": true,
+          "type": {"en": "air", "fr": "air"},
+          "damage": 95,
+          "criticalStrikeDamage": 119,
+          "lifeSteal": 100,
+          "effect": "met un debuff poision qui réinflige les degats et vol 100% de la vie"
+        },
+        {
+          "name": {"en" : "Lethargy", "fr": "Torpeur"},
+          "image": "../img/eniripsa/lethargy.png",
+          "AP": 5,
+          "minRange": 1,
+          "maxRange": 4,
+          "type": {"en": "air", "fr": "air"},
+          "damage": 153,
+          "criticalStrikeDamage": 192,
+          "highHPDamageBonus": 61,
+          "highHPCriticalStrikeDamageBonus": 76,
+          "effect": "si l'eni a 80% de vie elle fait + mal mais prend un degat equivalent au bonus supp"
+        },
+        {
+          "name": {"en" : "Heal-splosion", "fr": "Explo-soin"},
+          "image": "../img/eniripsa/heal-splosion.png",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 5,
+          "modifiable": true,
+          "lign": true,
+          "type": {"en": "fire", "fr": "feu"},
+          "damage": 78,
+          "criticalStrikeDamage": 98,
+          "effect": "met une marque on sen fout"
+        },
+        {
+          "name": {"en" : "Alternative Cure", "fr": "Cure alternative"},
+          "image": "../img/eniripsa/alternative-cure.png",
+          "AP": 2,
+          "minRange": 1,
+          "maxRange": 3,
+          "modifiable": true,
+          "type": {"en": "fire", "fr": "feu"},
+          "heal": 31,
+          "criticalStrikeHeal": 39,
+          "effect": "met une marque on sen fout"
+        },
+        {
+          "name": {"en" : "Guardian Fire", "fr": "Feu gardien"},
+          "image": "../img/eniripsa/guardian-fire.png",
+          "AP": 4,
+          "minRange": 1,
+          "maxRange": 2,
+          "modifiable": true,
+          "type": {"en": "fire", "fr": "feu"},
+          "heal": 58,
+          "criticalStrikeHeal": 72,
+          "effect": "met une marque on sen fout"
+        },
+        {
+          "name": {"en" : "Corrosive Heal", "fr": "Corro-soin"},
+          "image": "../img/eniripsa/corrosive-heal.png",
+          "AP": 5,
+          "WP": 1,
+          "minRange": 2,
+          "maxRange": 3,
+          "modifiable": true,
+          "type": {"en": "fire", "fr": "feu"},
+          "damage": 153,
+          "criticalStrikeDamage": 192,
+          "effect": "met une marque on sen fout"
+        },
+        {
+          "name": {"en" : "Purifying Flame", "fr": "Flamme purificatrice"},
+          "image": "../img/eniripsa/purifying-flame.png",
+          "AP": 3,
+          "minRange": 1,
+          "maxRange": 3,
+          "modifiable": true,
+          "type": {"en": "fire", "fr": "feu"},
+          "heal": 47,
+          "criticalStrikeHeal": 59,
+          "damage": 85,
+          "criticalStrikeDamage": 106,
+          "effect": "met une marque on sen fout"
+        },
+        {
+          "name": {"en" : "Fountain of Youth", "fr": "Jouvence"},
+          "AP": 2,
+          "type": {"en": "active", "fr": "actif"},
+          "effect": "met une marque on sen fout"
+        }
+      ]
+    },
+    {
+      "name": {"en": "Xelor", "fr": "Xélor"},
+      "image": "../img/xelor/xelor.jpg",
+      "description": {
+        "en": "Xelors love using their tick-tock tactics to play with time. Fascinated with clockwork mechanisms of all kinds, they can't bear to see a single second slip through their fingers... or a single enemy! Here's a tip: if you see them fiddling with their clock hands, run for your life, or the bell will soon be tolling for you...",
+        "fr": "Les Xélors se jouent du temps. Manipuler le tic-tac, telle est leur tactique ! Passionnés de mécanismes horlogers en tout genre, ils refusent de laisser filer la moindre seconde ou le moindre ennemi ! Si vous les voyez manipuler leurs aiguilles : fuyez ! Car c'est que votre heure a sonné..."
+      },
+      "spells": [
+        {
+          "name": {"en" : "Hammhour", "fr": "Martel'heure"},
+          "image": "../img/xelor/hammhour.png"
+        },
+        {
+          "image": "../img/xelor/slow-down.png"
+        },
+        {
+          "image": "../img/xelor/clock.png"
+        },
+        {
+          "image": "../img/xelor/sandglass.png"
+        },
+        {
+          "image": "../img/xelor/desynchronization.png"
+        },
+        {
+          "image": "../img/xelor/underhand.png"
+        },
+            {
+          "image": "../img/xelor/tempus-fugit.png"
+        },
+        {
+          "image": "../img/xelor/paradox.png"
+        },
+        {
+          "image": "../img/xelor/symmetry.png"
+        },
+        {
+          "image": "../img/xelor/spontaneous-return.png"
+        },
+        {
+          "image": "../img/xelor/disruption.png"
+        },
+        {
+          "image": "../img/xelor/suspension.png"
+        },
+        {
+          "image": "../img/xelor/dark-bolt.png"
+        },
+        {
+          "image": "../img/xelor/hand.png"
+        },
+        {
+          "image": "../img/xelor/dust.png"
+        }
+      ]
+    },
+    {
+      "name": {"en": "Cra", "fr": "Crâ"},
+      "image": "../img/cra/cra.jpg",
+      "description": {
+        "en": "If the Cras had a motto, it would probably be \"Pride and precision.\" Specializing in long-distance combat, these skilled archers are precious allies who have more than one string to their bow when it comes to keeping enemies back. Their greatest pleasure is firing feathered arrows into hastily retreating buttocks...",
+        "fr": " \"Fierté et précision\" , telle pourrait être la devise des Crâs. Spécialistes de l'attaque à distance, ces archers hors pair sont des alliés précieux qui ont plus d'une corde à leur arc pour tenir l'ennemi éloigné. Leur petit péché mignon : décocher leurs flèches dans les fessiers rebondis..."
+      },
+      "spells": [
+        {
+          "image": "../img/cra/homing-arrow.png"
+        },
+        {
+          "image": "../img/cra/retreat-arrow.png"
+        },
+        {
+          "image": "../img/cra/storm-arrow.png"
+        },
+        {
+          "image": "../img/cra/plaguing-arrow.png"
+        },
+        {
+          "image": "../img/cra/static-arrow.png"
+        },
+        {
+          "image": "../img/cra/fulminating-arrow.png"
+        },
+        {
+          "image": "../img/cra/burning-arrow.png"
+        },
+        {
+          "image": "../img/cra/flaming-arrow.png"
+        },
+        {
+          "image": "../img/cra/blazing-arrow.png"
+        },
+        {
+          "image": "../img/cra/explosive-arrow.png"
+        },
+        {
+          "image": "../img/cra/lashing-arrow.png"
+        },
+        {
+          "image": "../img/cra/raining-arrows.png"
+        },
+        {
+          "image": "../img/cra/riddling-arrow.png"
+        },
+        {
+          "image": "../img/cra/piercing-arrow.png"
+        },
+        {
+          "image": "../img/cra/destructive-arrow.png"
         }
       ]
     }

@@ -36,14 +36,15 @@ function updateLanguage() {
   const headTitle = document.querySelector('title');
   const bodyTitle = document.querySelector('#calculator-page-title');
   const languageButton = document.querySelector('button');
+  const className = document.querySelector('.class-name');
 
   // Vérifier l'existence puis modifier mes textes en fonction de la langue en cours
+  
   if (headTitle && bodyTitle && languageButton) {
     document.documentElement.lang = currentLanguage;
     headTitle.textContent = texts.headTitle[currentLanguage];
     bodyTitle.textContent = texts.bodyTitle[currentLanguage];
     languageButton.innerHTML = texts.languageButton[currentLanguage];
-    console.log(bodyTitle.textContent)
   }
 }
 

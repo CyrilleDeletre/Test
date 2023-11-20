@@ -1,4 +1,4 @@
-/* Couleurs */
+/* Couleurs
 body{
     padding: 0;
     margin: 0;
@@ -37,10 +37,6 @@ div{
     justify-content: space-evenly;
     gap: 1rem;
 }
-section{
-    padding: 1rem;
-    width: 250px;
-}
 
 
 .type-fire {
@@ -66,3 +62,57 @@ section{
 .type-chromatic {
     background-color: #f1e44c;
 }
+
+.classes-container{
+    display: flex;
+    flex-direction: column;
+}
+.classes-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.spells-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap:20px;
+}
+
+.spells-container article{
+    width: 250px;
+    padding: 1rem;
+} */
+
+
+/* CSS DU TRUC DE COMBAT */
+.description-container{
+    max-width: 400px;
+}
+#classes-container{
+    display: flex;
+    gap: 10px;
+}
+.class-image {
+    /* Styles pour l'image de fond du bouton */
+    width: 115px; /* Ajustez la largeur selon vos besoins */
+    height: 115px; /* Ajustez la hauteur selon vos besoins */
+}
+
+button{
+    border: none;
+}
+
+.spells-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap:10px;
+
+}
+.spell-image {
+   width: 64px;
+   height: 64px;
+}
+
